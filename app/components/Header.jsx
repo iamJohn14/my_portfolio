@@ -7,7 +7,7 @@ const Header = () => {
     <div
       className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'
     >
-      <div>
+      <div className='mt-40 md:mt-4'>
         <Image
           src={assets.profile_img}
           alt='profile'
@@ -23,10 +23,10 @@ const Header = () => {
         />
       </h3>
       <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'>
-        full-stack web developer based in Pampanga.
+        full-stack web developer based in the Philippines.
       </h1>
       <p className='max-w-2xl mx-auto font-ovo'>
-        I am a full-stack developer from Philippines with 2.5 years of experience.
+        I am a full-stack developer from Porac, Pampanga with 2.5 years of experience.
       </p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <a href="#contact"
@@ -39,7 +39,7 @@ const Header = () => {
             className='w-4'
           />
         </a>
-        <a href="/sample-resume.pdf" download
+        <a href="/john-resume.pdf" download
            className='px-10 py-3 border rounded-full rounder-full border-gray-500 flex items-center gap-2'
         >
           my resume

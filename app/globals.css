@@ -18,14 +18,11 @@
   font-family: 'Ovo', serif;
 }
 
-.text-lightHover {
-  color: var(--lightHover)
+.shadow-black:hover {
+  box-shadow: 4px 4px 0 #000;
 }
 
-.text-darkHover {
-  color: var(--darkHover);
+.shadow-white {
+  box-shadow: 4px 4px 0 #fff;
 }
 
-.text-darkTheme {
-  color: var(--darkTheme);
-}
