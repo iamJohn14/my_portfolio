@@ -11,7 +11,6 @@ const Navbar = () => {
     sideMenuRef.current.style.transform = 'translateX(16rem)'
   }
 
-
   return (
     <>
       <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
