@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import {assets} from "@/assets/assets";
 
-const Header = () => {
+const Header = ({isDarkMode}) => {
   return (
     <div
       className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'
@@ -30,7 +30,8 @@ const Header = () => {
       </p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <a href="#contact"
-           className='px-10 py-3 border rounded-full border-white bg-black text-white flex items-center gap-2'
+           className={`px-10 py-3 border rounded-full border-white text-white flex items-center gap-2
+           ${isDarkMode ? "bg-transparent " : "bg-black"}`}
         >
           contact me
           <Image
@@ -40,7 +41,8 @@ const Header = () => {
           />
         </a>
         <a href="/john-resume.pdf" download
-           className='px-10 py-3 border rounded-full rounder-full border-gray-500 flex items-center gap-2'
+           className={`px-10 py-3 border rounded-full rounder-full border-gray-500 flex items-center gap-2
+           ${isDarkMode ? "bg-white text-black" : ""}`}
         >
           my resume
           <Image

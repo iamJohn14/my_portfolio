@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {assets, workData} from "@/assets/assets";
 import Image from "next/image";
 
-const Work = () => {
+const Work = ({isDarkMode}) => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? workData : workData.slice(0, 4);
+
   return (
     <div id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
       <h4 className='text-center mb-2 text-lg font-ovo'>
@@ -15,8 +18,8 @@ const Work = () => {
         This is a collection of my web projects where I put my full-stack skills and design sense to work,
         building apps that people enjoy using and that run smoothly behind the scenes.
       </p>
-      <div className='grid auto-fit my-10 gap-5'>
-        {workData.map((project, index)=> (
+      <div className={`grid auto-fit my-10 gap-5 ${isDarkMode ? "text-black" : "" }`}>
+        {visibleProjects.map((project, index)=> (
           <div
             key={index}
             style={{backgroundImage: `url(${project.bgImage})`}}
@@ -42,18 +45,21 @@ const Work = () => {
           </div>
         ))}
       </div>
-      <a
-        href='#work'
-        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px]
-        border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[var(--lightHover)] duration-500'
-      >
-        Show more
-        <Image
-          src={assets.right_arrow_bold}
-          alt='right-arrow'
-          className='w-4'
-        />
-      </a>
+      {workData.length > 3 && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className={`w-max flex items-center justify-center gap-2 border-[0.5px] rounded-full py-3 
+          px-10 mx-auto my-20  duration-500 ${isDarkMode ? "hover:bg-[var(--darkHover)] text-white border-white" 
+          : "hover:bg-[var(--lightHover)] text-gray-700 border-gray-700"}`}
+        >
+          {showAll ? "Show less" : "Show more"}
+          <Image
+            src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
+            alt='right-arrow'
+            className='w-4'
+          />
+        </button>
+      )}
     </div>
   )
 }

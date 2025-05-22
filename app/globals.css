@@ -8,6 +8,7 @@
 
 * {
   font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .font-outfit {
@@ -29,4 +30,14 @@
 .auto-fit {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+.dark {
+  background-color: var(--darkTheme);
+  color: white;
+}
+
+.dark-shadow {
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
 

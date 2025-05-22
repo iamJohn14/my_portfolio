@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import {assets} from "@/assets/assets";
 
-const Footer = () => {
+const Footer = ({isDarkMode}) => {
   return (
     <div className='mt-20'>
       <div className='text-center'>
@@ -13,7 +13,7 @@ const Footer = () => {
         />
         <div className='w-max flex items-center gap-2 mx-auto'>
           <Image
-            src={assets.mail_icon}
+            src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
             alt='mail'
             className='w-6'
           />

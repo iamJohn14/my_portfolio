@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Image from "next/image";
 import {assets} from "@/assets/assets";
 
-const Contact = () => {
+const Contact = ({isDarkMode}) => {
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
@@ -31,8 +31,8 @@ const Contact = () => {
   return (
     <div
       id='contact'
-      className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")]
-      bg-no-repeat bg-center bg-[length:90%_auto'
+      className={`w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")]
+        bg-no-repeat bg-center bg-[length:90%_auto] ${isDarkMode ? "bg-none" : ""}`}
     >
       <h4 className='text-center mb-2 text-lg font-ovo'>
         Connect with me
@@ -48,19 +48,22 @@ const Contact = () => {
       <form className='max-w-2xl mx-auto' onSubmit={onSubmit}>
         <div className='grid auto-fit gap-6 mt-10 mb-8'>
           <input type='text' placeholder='Enter your name' required name='name'
-                 className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white'
+                 className={`flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md
+                 ${isDarkMode ? "border-white/90 bg-[#2a004a4D]" : "border-gray-400 bg-white"}`}
           />
           <input type='email' placeholder='Enter your email' required name='email'
-                 className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white'
+                 className={`flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md
+                 ${isDarkMode ? "border-white/90 bg-[#2a004a4D]" : "border-gray-400 bg-white"}`}
           />
         </div>
         <textarea rows='6' placeholder='Enter your message' required name='message'
-                 className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6'
+                 className={`w-full p-4 outline-none border-[0.5px] rounded-md mb-6
+                  ${isDarkMode ? "border-white/90 bg-[#2a004a4D]" : "border-gray-400 bg-white"}`}
         ></textarea>
         <button
           type='submit'
-          className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white
-            rounded-full mx-auto hover:bg-black duration-500'>
+          className={`py-3 px-8 w-max flex items-center justify-between gap-2 text-white rounded-full mx-auto 
+          duration-500 ${isDarkMode ? "bg-transparent border-[0.5px] hover:bg-[var(--darkHover)]" : "bg-black/80 hover:bg-black"}`}>
           Submit now
           <Image src={assets.right_arrow_white} alt='submit' className='w-4' />
         </button>
