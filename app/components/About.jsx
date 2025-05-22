@@ -17,10 +17,10 @@ const About = () => {
        </div>
        <div className='flex-1'>
           <p className='mb-10 max-w-2xl font-ovo'>
-            I’m a skilled Full-Stack Developer with over 2.5 years of experience building scalable web applications.
-            I've contributed to both established companies and agile startups, helping them grow through clean,
-            efficient code and user-focused solutions. My work spans front-end development, backend architecture,
-            and cross-functional collaboration to deliver impactful digital experiences
+            I craft scalable web applications that blend clean, efficient code with user-focused design.
+            I've contributed to both agile startups and established companies, delivering impactful digital
+            experiences through seamless front-end development, solid backend architecture, and effective
+            cross-functional collaboration.
           </p>
 
          <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
