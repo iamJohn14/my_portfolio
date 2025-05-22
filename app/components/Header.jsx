@@ -23,7 +23,7 @@ const Header = () => {
         />
       </h3>
       <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'>
-        full-stack web developer based in the Philippines.
+        full-stack web developer based in the Philippines
       </h1>
       <p className='max-w-2xl mx-auto font-ovo'>
         I am a full-stack developer from Porac, Pampanga with 2.5 years of experience.
