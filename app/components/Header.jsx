@@ -43,7 +43,7 @@ const Header = ({isDarkMode}) => {
         whileInView={{opacity: 1 }}
         transition={{duration: 0.6, delay: 0.7}}
         className='max-w-2xl mx-auto font-ovo'>
-        I am a full-stack developer from Porac, Pampanga with 2.5 years of experience.
+        I am a full-stack developer from Porac, Pampanga with 3 years of experience.
       </motion.p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <motion.a
