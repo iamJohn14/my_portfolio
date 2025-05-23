@@ -86,7 +86,7 @@ export const workData = [
     {
         title: 'WellNoww',
         description: 'Wellness & Health',
-        tech: 'Next JS, MongoDB, Tailwind',
+        tech: 'Next JS, Mongo, Tailwind',
         bgImage: '/work-1.png',
         link: 'https://www.wellnoww.com/'
     },
@@ -101,35 +101,35 @@ export const workData = [
         title: 'PizzaGrab',
         description: 'Online Pizza Ordering',
         tech: 'React JS, CSS, HTML',
-        bgImage: '/work-3.jpg',
+        bgImage: '/work-3.png',
         link: 'https://pizzagrab.vercel.app/'
     },
     {
         title: 'iChat',
         description: 'Web Chat App',
         tech: 'MERN, Socket.IO',
-        bgImage: '/work-4.jpg',
+        bgImage: '/work-4.png',
         link: 'https://ichat-fe.vercel.app/'
     },
     {
         title: 'PhDestination',
         description: 'Destination Posting',
-        tech: 'React JS, CSS, HTML',
-        bgImage: '/work-5.jpg',
+        tech: 'React JS, Firebase',
+        bgImage: '/work-5.png',
         link: 'https://ph-destinations.vercel.app/'
     },
     {
         title: 'Capstone 1',
         description: 'Portfolio',
         tech: 'Javascript, CSS, HTML',
-        bgImage: '/work-6.jpg',
+        bgImage: '/work-6.png',
         link: 'https://portfolio-iammrjohn14.vercel.app/'
     },
     {
         title: 'Capstone 2',
         description: 'Course Booking',
-        tech: 'React JS, CSS, HTML Bootstrap',
-        bgImage: '/work-7.jpg',
+        tech: 'MERN, Bootstrap',
+        bgImage: '/work-7.png',
         link: 'https://iskulbukol.vercel.app/'
     },
 ]

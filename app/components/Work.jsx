@@ -41,7 +41,9 @@ const Work = ({isDarkMode}) => {
         transition={{duration: 0.6, delay: 0.9}}
         className={`grid auto-fit my-10 gap-5 ${isDarkMode ? "text-black" : "" }`}>
         {visibleProjects.map((project, index)=> (
-          <motion.div
+          <motion.a
+            href={project.link}
+            target='_blank'
             whileHover={{scale: 1.05}}
             transition={{duration: 0.3}}
             key={index}
@@ -57,18 +59,18 @@ const Work = ({isDarkMode}) => {
                 <p className='text-sm text-gray-700'>{project.description}</p>
                 <p className='text-xs text-gray-500'>{project.tech}</p>
               </div>
-              <a href={project.link} target='_blank'
-                className='border rounded-full border-black w-9 aspect-square flex items-center justify-center
-              shadow-[2px_2px_#000] group-hover:bg-sky-100 transition'
-              >
-                <Image
-                  src={assets.send_icon}
-                  alt='send-icon'
-                  className='w-5'
-                />
-              </a>
+              {/*<a href={project.link} target='_blank'*/}
+              {/*  className='border rounded-full border-black w-9 aspect-square flex items-center justify-center*/}
+              {/*shadow-[2px_2px_#000] group-hover:bg-sky-100 transition'*/}
+              {/*>*/}
+              {/*  <Image*/}
+              {/*    src={assets.send_icon}*/}
+              {/*    alt='send-icon'*/}
+              {/*    className='w-5'*/}
+              {/*  />*/}
+              {/*</a>*/}
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </motion.div>
       {workData.length > 4 && (
