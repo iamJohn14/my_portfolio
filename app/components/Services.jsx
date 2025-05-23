@@ -39,7 +39,7 @@ const Services = ({isDarkMode}) => {
         whileInView={{opacity: 1}}
         transition={{duration: 0.6, delay: 0.9}}
         className='grid auto-fit gap-6 my-10'>
-        {serviceData.map(({icon, title, description, link}, index)=>(
+        {serviceData.map(({icon, title, description}, index)=>(
           <motion.div
             whileHover={{scale: 1.05}}
             key={index}
@@ -53,10 +53,6 @@ const Services = ({isDarkMode}) => {
             />
             <h3 className={`text-lg my-4 ${isDarkMode ? "text-white" : "text-gray-700"}`}>{title}</h3>
             <p className={`text-sm leading-5 ${isDarkMode ? "text-white/80" : "text-gray-600"}`}>{description}</p>
-            <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-              Read more
-              <Image src={assets.right_arrow} alt='read-more' className='w-4' />
-            </a>
           </motion.div>
         ))}
       </motion.div>

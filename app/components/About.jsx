@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import {assets, infoList, toolsData} from "@/assets/assets";
+import {assets, infoList, techData, toolsData} from "@/assets/assets";
 import { motion } from "motion/react";
 
 const About = ({isDarkMode}) => {
@@ -41,24 +41,23 @@ const About = ({isDarkMode}) => {
          whileInView={{opacity: 1}}
          transition={{duration: 0.6, delay: 0.8}}
          className='flex-1'>
-          <p className='mb-10 max-w-2xl font-ovo'>
-            I craft scalable web applications that blend clean, efficient code with user-focused design.
-            I've contributed to both agile startups and established companies, delivering impactful digital
-            experiences through seamless front-end development, solid backend architecture, and effective
-            cross-functional collaboration.
-          </p>
-
+         <p className='mb-10 max-w-2xl font-ovo'>
+           I craft scalable web applications that blend clean, efficient code with user-focused design.
+           I've contributed to both agile startups and established companies, delivering impactful digital
+           experiences through seamless front-end development, solid backend architecture, and effective
+           cross-functional collaboration.
+         </p>
          <motion.ul
            initial={{opacity: 0}}
            whileInView={{opacity: 1}}
            transition={{duration: 1, delay: 0.8}}
-           className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
-           {infoList.map(({icon, iconDark, title, description}, index)=>(
+           className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl'>
+           {infoList.map(({icon, iconDark, title, description}, index) => (
              <motion.li
                whileInView={{scale: 1.05}}
                key={index}
                className={`border-[0.5px] rounded-xl p-6 cursor-pointer hover:-translate-y-1 duration-500 
-               ${isDarkMode ? "border-white hover:bg-[var(--darkHover)] shadow-white" : "border-gray-400 hover:bg-[var(--lightHover)] shadow-black"} `}
+               ${isDarkMode ? "border-white hover:bg-[var(--darkHover)] shadow-white" : "border-gray-400 hover:bg-[var(--lightHover)] shadow-black"}`}
              >
                <Image
                  src={isDarkMode ? iconDark : icon}
@@ -70,20 +69,38 @@ const About = ({isDarkMode}) => {
              </motion.li>
            ))}
          </motion.ul>
-
          <motion.h4
            initial={{opacity: 0, y: -20}}
-           whileInHover={{opacity: 1, y: 0}}
-           transition={{duration: 0.5, delay: 1.3}}
+           whileInView={{opacity: 1, y: 0}}
+           transition={{duration: 1.3, delay: 0.8}}
            className={`my-6 font-ovo ${isDarkMode ? "text-white/80" : "text-gray-700"}`}>
-           Tools I use
+           Technologies and Tools I use
          </motion.h4>
          <motion.ul
            initial={{opacity: 0}}
            whileInView={{opacity: 1}}
            transition={{duration: 1.5, delay: 0.6}}
+           className='flex items-center gap-3 sm:gap-5 mb-6'>
+           {techData.map((tool, index) => (
+             <motion.li
+               whileHover={{scale: 1.1}}
+               key={index}
+               className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
+               rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
+             >
+               <Image src={tool}
+                      alt='tool'
+                      className='w-5 sm:w-7'
+               />
+             </motion.li>
+           ))}
+         </motion.ul>
+         <motion.ul
+           initial={{opacity: 0}}
+           whileInView={{opacity: 1}}
+           transition={{duration: 1, delay: 0.8}}
            className='flex items-center gap-3 sm:gap-5'>
-           {toolsData.map((tool, index)=>(
+           {toolsData.map((tool, index) => (
              <motion.li
                whileHover={{scale: 1.1}}
                key={index}

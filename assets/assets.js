@@ -34,6 +34,11 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import user_image from './user-image.jpg'
+import webstorm from './webstorm.png'
+import express from './express.png'
+import next from './next.png'
+import react from './react.png'
+import supabase from './supabase.png'
 
 export const assets = {
     user_image,
@@ -71,45 +76,93 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    webstorm,
+    express,
+    next,
+    react,
+    supabase,
 };
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'WellNoww',
+        description: 'Wellness & Health',
+        tech: 'Next JS, MongoDB, Tailwind',
         bgImage: '/work-1.png',
+        link: 'https://www.wellnoww.com/'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Text Summarizer',
+        description: 'Text/Paragraph Editor',
+        tech: 'Next JS, Supabase, AI',
         bgImage: '/work-2.png',
+        link: 'https://text-summarizer-inky-eight.vercel.app/'
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'PizzaGrab',
+        description: 'Online Pizza Ordering',
+        tech: 'React JS, CSS, HTML',
+        bgImage: '/work-3.jpg',
+        link: 'https://pizzagrab.vercel.app/'
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'iChat',
+        description: 'Web Chat App',
+        tech: 'MERN, Socket.IO',
+        bgImage: '/work-4.jpg',
+        link: 'https://ichat-fe.vercel.app/'
+    },
+    {
+        title: 'PhDestination',
+        description: 'Destination Posting',
+        tech: 'React JS, CSS, HTML',
+        bgImage: '/work-5.jpg',
+        link: 'https://ph-destinations.vercel.app/'
+    },
+    {
+        title: 'Capstone 1',
+        description: 'Portfolio',
+        tech: 'Javascript, CSS, HTML',
+        bgImage: '/work-6.jpg',
+        link: 'https://portfolio-iammrjohn14.vercel.app/'
+    },
+    {
+        title: 'Capstone 2',
+        description: 'Course Booking',
+        tech: 'React JS, CSS, HTML Bootstrap',
+        bgImage: '/work-7.jpg',
+        link: 'https://iskulbukol.vercel.app/'
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Web design',
+        description: 'I build custom websites that are fast, easy to use, and made to fit your needs. ' +
+          'You’ll work with me directly from start to finish. No middlemen, just clear and honest communication' },
+    { icon: assets.mobile_icon, title: 'Mobile app',
+        description: 'I create mobile apps that are easy to use and work smoothly on both Android and iOS. ' +
+          'Whether it’s a simple idea or a full-featured app from design to development' },
+    { icon: assets.ui_icon, title: 'UI/UX design',
+        description: 'I design clean and easy-to-use interfaces that make your website or app simple and enjoyable ' +
+          'for people to use. From layout to user flow, I focus on creating a smooth experience that looks good ' +
+          'and works well' },
+    { icon: assets.graphics_icon, title: 'Graphics design',
+        description: 'I offer creative design solutions that help your brand stand out and communicate clearly. ' +
+          'From logos to social media graphics, I focus on visuals that connect with your audience and leave a ' +
+          'lasting impression' },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, GraphQL, Typescript' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Science in Commerce in Management' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.webstorm, assets.figma, assets.express, assets.git
 ];
+
+export const techData = [
+  assets.react, assets.next, assets.firebase, assets.mongodb, assets.supabase
+]
