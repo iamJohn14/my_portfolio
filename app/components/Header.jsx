@@ -4,6 +4,8 @@ import {assets} from "@/assets/assets";
 import { motion } from "motion/react";
 
 const Header = ({isDarkMode}) => {
+  const yearsOfExperience = new Date().getFullYear() - 2022;
+
   return (
     <div
       className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'
@@ -43,7 +45,7 @@ const Header = ({isDarkMode}) => {
         whileInView={{opacity: 1 }}
         transition={{duration: 0.6, delay: 0.7}}
         className='max-w-2xl mx-auto font-ovo'>
-        I am a full-stack developer from Porac, Pampanga with 3 years of experience.
+        I am a full-stack developer from Porac, Pampanga with {yearsOfExperience} years of experience.
       </motion.p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <motion.a
