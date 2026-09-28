@@ -84,6 +84,13 @@ export const assets = {
 
 export const workData = [
     {
+        title: 'My AI Companion',
+        description: 'Connect with a caring AI companion',
+        tech: 'React JS, Cloud Integration, SEO',
+        bgImage: '/work-8.png',
+        link: 'https://myaicompanion.org/'
+    },
+    {
         title: 'WellNoww',
         description: 'Wellness & Health',
         tech: 'Next JS, Mongo, Tailwind',
